@@ -15,8 +15,6 @@ productsRoute.get('/', async(req,res,next)=>{
         res.status(500).send(error)
     }
 })
-
-
 productsRoute.get("/:id",async(req,res,next)=>{
     try {
         const query = `SELECT * FROM products WHERE products_id=${req.params.id};`
